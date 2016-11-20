@@ -7,15 +7,12 @@ import java.util.Scanner;
  */
 public class FileUtilTest {
     public static void main(String[] args) throws IOException {
+        /*
+        把路径改好即可
+         */
         File dir=new File("D:\\eclipse code\\Algo");
         FileUtil.scan(dir);
-        /*File file=new File("D:\\eclipse code\\Algo\\src\\test\\algosort.java");
-        Scanner sc=new Scanner(file);
-        while(sc.hasNext()){
-            while(sc.next().equals("import")){
-                System.out.println(sc.next());
-            }
-        }*/
+
 
     }
 }
