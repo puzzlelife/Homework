@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>JSPTest</display-name>
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
   </welcome-file-list>
   
   <servlet>
@@ -26,4 +26,29 @@
   	<servlet-name>servlet2</servlet-name>
   	<url-pattern>/s2</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ProcessServlet</servlet-name>
+	<servlet-class>com.number3.ProcessServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ProcessServlet</servlet-name>
+  	<url-pattern>/processing</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>UploadServlet</servlet-name>
+	<servlet-class>com.number3.UploadServlet</servlet-class>
+	<multipart-config>
+		<max-file-size>512000</max-file-size>
+		<max-request-size>4096000</max-request-size>
+	</multipart-config>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UploadServlet</servlet-name>
+  	<url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+  <listener>
+  	<listener-class>com.number2.WebContextListener</listener-class>
+  </listener>
+  
 </web-app>
